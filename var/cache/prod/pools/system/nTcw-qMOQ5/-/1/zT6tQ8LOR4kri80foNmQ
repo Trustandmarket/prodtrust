@@ -1,0 +1,63 @@
+<?php //1bb9411c4f7bbd9add4d021de2a7e53f
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer' => [
+            'sql' => [
+                1 => 'SELECT DISTINCT w0_.id AS id_0, w0_.id AS id_1 FROM `wp_users` w0_ WHERE LOWER(w0_.user_nicename) LIKE ? OR LOWER(w0_.user_nicename) IN (?) OR LOWER(w0_.username_canonical) LIKE ? OR LOWER(w0_.username_canonical) IN (?) OR LOWER(w0_.user_activation_key) LIKE ? OR LOWER(w0_.user_activation_key) IN (?) OR LOWER(w0_.display_name) LIKE ? OR LOWER(w0_.display_name) IN (?) OR LOWER(w0_.landing_page) LIKE ? OR LOWER(w0_.landing_page) IN (?) OR LOWER(w0_.email_canonical) LIKE ? OR LOWER(w0_.email_canonical) IN (?) OR LOWER(w0_.userEmail) LIKE ? OR LOWER(w0_.userEmail) IN (?) OR LOWER(w0_.userPass) LIKE ? OR LOWER(w0_.userPass) IN (?) OR LOWER(w0_.date_naissance) LIKE ? OR LOWER(w0_.date_naissance) IN (?) ORDER BY w0_.id DESC',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'id_0' => '_dctrn_id',
+                    'id_1' => '_dctrn_ord0',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'id_0' => 'bigint',
+                    'id_1' => 'bigint',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    [
+        [
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlExecutor' => null,
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlFinalizer' => $o[1],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'resultSetMapping' => $o[2],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'parameterMappings' => [
+                'query_for_text' => [
+                    0,
+                    2,
+                    4,
+                    6,
+                    8,
+                    10,
+                    12,
+                    14,
+                    16,
+                ],
+                'query_as_words' => [
+                    1,
+                    3,
+                    5,
+                    7,
+                    9,
+                    11,
+                    13,
+                    15,
+                    17,
+                ],
+            ],
+        ],
+    ]
+); }];

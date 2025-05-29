@@ -1,0 +1,22 @@
+<?php //App%255CController%255CHomeController%2523sousCategorie1
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/{_locale}/home/sous_categorie1',
+            ],
+            'name' => [
+                'sous_categorie1',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

@@ -1,0 +1,48 @@
+<?php //1038fc10fbb424fab1831258edf95b88
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer' => [
+            'sql' => [
+                1 => 'SELECT w0_.meta_key AS meta_key_0, w0_.meta_value AS meta_value_1 FROM wp_usermeta w0_ WHERE w0_.user_id = ? AND w0_.meta_key IN (?) AND (w0_.umeta_id IN (SELECT MAX(w1_.umeta_id) AS sclr_2 FROM wp_usermeta w1_ WHERE w1_.user_id = ? AND w1_.meta_key = w0_.meta_key GROUP BY w1_.meta_key)) ORDER BY w0_.meta_key ASC',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'meta_key_0' => 'metaKey',
+                    'meta_value_1' => 'metaValue',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'meta_key_0' => 'string',
+                    'meta_value_1' => 'text',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    [
+        [
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlExecutor' => null,
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlFinalizer' => $o[1],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'resultSetMapping' => $o[2],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'parameterMappings' => [
+                'userId' => [
+                    0,
+                    2,
+                ],
+                'keys' => [
+                    1,
+                ],
+            ],
+        ],
+    ]
+); }];

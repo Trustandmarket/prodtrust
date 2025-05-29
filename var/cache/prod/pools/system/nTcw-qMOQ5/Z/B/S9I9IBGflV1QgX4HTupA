@@ -1,0 +1,59 @@
+<?php //a36828b98e5eed3879e26ee9cf630732
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer' => [
+            'sql' => [
+                1 => 'SELECT w0_.term_taxonomy_id AS term_taxonomy_id_0, w0_.taxonomy AS taxonomy_1, w0_.description AS description_2, w0_.parent AS parent_3, w0_.count AS count_4, w0_.term_id AS term_id_5, w1_.name AS name_6, w1_.slug AS slug_7 FROM wp_term_taxonomy w0_ INNER JOIN wp_terms w1_ WHERE w0_.term_id = w1_.term_id AND w0_.taxonomy = ? AND w0_.parent = ? ORDER BY w1_.name ASC',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'term_taxonomy_id_0' => 'termTaxonomyId',
+                    'taxonomy_1' => 'taxonomy',
+                    'description_2' => 'description',
+                    'parent_3' => 'parent',
+                    'count_4' => 'count',
+                    'term_id_5' => 'termId',
+                    'name_6' => 'name',
+                    'slug_7' => 'slug',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'term_taxonomy_id_0' => 'bigint',
+                    'taxonomy_1' => 'string',
+                    'description_2' => 'text',
+                    'parent_3' => 'bigint',
+                    'count_4' => 'bigint',
+                    'term_id_5' => 'bigint',
+                    'name_6' => 'string',
+                    'slug_7' => 'string',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    [
+        [
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlExecutor' => null,
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlFinalizer' => $o[1],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'resultSetMapping' => $o[2],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'parameterMappings' => [
+                'key' => [
+                    0,
+                ],
+                'p' => [
+                    1,
+                ],
+            ],
+        ],
+    ]
+); }];

@@ -1,0 +1,5 @@
+app_admin_dashboard_index:
+  path: "/{_locale}/admin"
+  methods: "GET"
+  requirements: {_locale: "fr"}
+  controller: App\Controller\Admin\DashboardController::index

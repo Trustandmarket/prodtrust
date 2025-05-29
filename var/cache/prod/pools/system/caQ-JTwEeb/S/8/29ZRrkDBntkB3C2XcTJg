@@ -1,0 +1,3 @@
+<?php //App%255CController%255CAdmin%255CCommandes%255CCommandes%255CWpPostsCrudController%2523configureCrud
+
+return [PHP_INT_MAX, []];

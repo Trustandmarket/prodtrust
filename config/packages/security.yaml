@@ -1,0 +1,78 @@
+security:
+    enable_authenticator_manager: true
+    # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
+    password_hashers:
+        Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+    # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider    
+    role_hierarchy:
+        ROLE_AUTO_ENTREPRENEUR: ROLE_ABONNE
+        ROLE_SOCIETE: ROLE_ABONNE
+        ROLE_CONTRIBUTEUR: [ROLE_SOCIETE, ROLE_AUTO_ENTREPRENEUR]
+        ROLE_COMMERCE: ROLE_CONTRIBUTEUR
+        ROLE_SUPER_ADMIN: ROLE_COMMERCE
+    providers:
+        # used to reload user from session & other features (e.g. switch_user)
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email_canonical
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            pattern: ^/
+            user_checker: App\Security\UserChecker
+            lazy: true
+            provider: app_user_provider
+            custom_authenticator: App\Security\AppAuthenticator
+            logout:
+                path: app_logout
+            remember_me:
+                secret:   '%kernel.secret%' # required
+                lifetime: 604800 # 1 week in seconds
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        - { path: ^login/fr, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^login/en, role: IS_AUTHENTICATED_ANONYMOUSLY }
+
+        - { path: ^register/fr, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^register/en, role: IS_AUTHENTICATED_ANONYMOUSLY }
+
+        - { path: ^fr/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^en/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+
+        - { path: ^/chat/fr, role: IS_AUTHENTICATED_FULLY }
+        - { path: ^/chat/en, role: IS_AUTHENTICATED_FULLY }
+
+        - { path: ^/fr/profil-utilisateur/^, role: IS_AUTHENTICATED_FULLY }
+        - { path: ^/en/profil-utilisateur/^, role: IS_AUTHENTICATED_FULLY }
+        - { path: ^/fr/profil-utilisateur/annonces, role: [ROLE_AUTO_ENTREPRENEUR, ROLE_SOCIETE, ROLE_ABONNE] }
+        
+
+        - { path: ^/fr/admin, role: [ROLE_SUPER_ADMIN, ROLE_CONTRIBUTEUR, ROLE_COMMERCE] }
+        - { path: ^/en/admin, role: [ROLE_SUPER_ADMIN, ROLE_CONTRIBUTEUR, ROLE_COMMERCE] }
+
+        - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: '^/api/v1/[a-z]{2}/doc', roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: '^/api/v1/[a-z]{2}/register', roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
+
+        - { path: ^/paiement, role: IS_AUTHENTICATED_FULLY }
+
+        - { path: ^/profil-utilisateur, role: IS_AUTHENTICATED_FULLY }
+
+when@test:
+    security:
+        password_hashers:
+            # By default, password hashers are resource intensive and take time. This is
+            # important to generate secure password hashes. In tests however, secure hashes
+            # are not important, waste resources and increase test times. The following
+            # reduces the work factor to the lowest possible values.
+            Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface:
+                algorithm: auto
+                cost: 4 # Lowest possible value for bcrypt
+                time_cost: 3 # Lowest possible value for argon
+                memory_cost: 10 # Lowest possible value for argon

@@ -1,0 +1,102 @@
+<?php //fded614db5d4c4e0732143948bdf2c7b
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer' => [
+            'sql' => [
+                1 => 'SELECT w0_.comment_ID AS comment_ID_0, w0_.comment_post_ID AS comment_post_ID_1, w0_.comment_author AS comment_author_2, w0_.comment_author_email AS comment_author_email_3, w0_.comment_author_url AS comment_author_url_4, w0_.comment_author_IP AS comment_author_IP_5, w0_.comment_date AS comment_date_6, w0_.comment_date_gmt AS comment_date_gmt_7, w0_.comment_content AS comment_content_8, w0_.comment_karma AS comment_karma_9, w0_.comment_approved AS comment_approved_10, w0_.comment_agent AS comment_agent_11, w0_.comment_type AS comment_type_12, w0_.comment_parent AS comment_parent_13, w0_.user_id AS user_id_14 FROM wp_comments w0_ WHERE w0_.comment_approved = ? AND w0_.comment_post_ID = ?',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'wc' => 'App\\Entity\\WpComments',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'comment_ID_0' => 'commentId',
+                    'comment_post_ID_1' => 'commentPostId',
+                    'comment_author_2' => 'commentAuthor',
+                    'comment_author_email_3' => 'commentAuthorEmail',
+                    'comment_author_url_4' => 'commentAuthorUrl',
+                    'comment_author_IP_5' => 'commentAuthorIp',
+                    'comment_date_6' => 'commentDate',
+                    'comment_date_gmt_7' => 'commentDateGmt',
+                    'comment_content_8' => 'commentContent',
+                    'comment_karma_9' => 'commentKarma',
+                    'comment_approved_10' => 'commentApproved',
+                    'comment_agent_11' => 'commentAgent',
+                    'comment_type_12' => 'commentType',
+                    'comment_parent_13' => 'commentParent',
+                    'user_id_14' => 'userId',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'wc' => null,
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'comment_ID_0' => 'wc',
+                    'comment_post_ID_1' => 'wc',
+                    'comment_author_2' => 'wc',
+                    'comment_author_email_3' => 'wc',
+                    'comment_author_url_4' => 'wc',
+                    'comment_author_IP_5' => 'wc',
+                    'comment_date_6' => 'wc',
+                    'comment_date_gmt_7' => 'wc',
+                    'comment_content_8' => 'wc',
+                    'comment_karma_9' => 'wc',
+                    'comment_approved_10' => 'wc',
+                    'comment_agent_11' => 'wc',
+                    'comment_type_12' => 'wc',
+                    'comment_parent_13' => 'wc',
+                    'user_id_14' => 'wc',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'comment_ID_0' => 'App\\Entity\\WpComments',
+                    'comment_post_ID_1' => 'App\\Entity\\WpComments',
+                    'comment_author_2' => 'App\\Entity\\WpComments',
+                    'comment_author_email_3' => 'App\\Entity\\WpComments',
+                    'comment_author_url_4' => 'App\\Entity\\WpComments',
+                    'comment_author_IP_5' => 'App\\Entity\\WpComments',
+                    'comment_date_6' => 'App\\Entity\\WpComments',
+                    'comment_date_gmt_7' => 'App\\Entity\\WpComments',
+                    'comment_content_8' => 'App\\Entity\\WpComments',
+                    'comment_karma_9' => 'App\\Entity\\WpComments',
+                    'comment_approved_10' => 'App\\Entity\\WpComments',
+                    'comment_agent_11' => 'App\\Entity\\WpComments',
+                    'comment_type_12' => 'App\\Entity\\WpComments',
+                    'comment_parent_13' => 'App\\Entity\\WpComments',
+                    'user_id_14' => 'App\\Entity\\WpComments',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    [
+        [
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlExecutor' => null,
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlFinalizer' => $o[1],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'resultSetMapping' => $o[2],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'parameterMappings' => [
+                'commentApproved' => [
+                    0,
+                ],
+                'commentPostId' => [
+                    1,
+                ],
+            ],
+        ],
+    ]
+); }];

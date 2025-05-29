@@ -1,0 +1,125 @@
+<?php //779d45def6cc40f4ffc261bc60d9e582
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer' => [
+            'sql' => [
+                1 => 'SELECT a0_.id AS id_0, a0_.tarif AS tarif_1, a0_.abonnement_actif AS abonnement_actif_2, a0_.date_fin AS date_fin_3, a0_.tag AS tag_4, a0_.nom_ou_societe AS nom_ou_societe_5, a0_.adresse AS adresse_6, a0_.ville AS ville_7, a0_.code_postal AS code_postal_8, a0_.pays AS pays_9, a0_.numero_tva AS numero_tva_10, a0_.reccuring_payment_id AS reccuring_payment_id_11, a0_.reccuring_payment_payin_id AS reccuring_payment_payin_id_12, a0_.created_at AS created_at_13, a0_.updated_at AS updated_at_14, a0_.user_id AS user_id_15, a0_.offre_id AS offre_id_16 FROM abonnement a0_ LEFT JOIN offre_interne o1_ ON a0_.offre_id = o1_.id LEFT JOIN `wp_users` w2_ ON a0_.user_id = w2_.id WHERE a0_.abonnement_actif = ? AND o1_.titre <> ? AND DATEDIFF(DATE_ADD(a0_.date_fin, INTERVAL 1 DAY), ?) <= 0 AND a0_.tag <> ? AND a0_.tag <> ? ORDER BY a0_.id DESC',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'a' => 'App\\Entity\\Abonnement',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'tarif_1' => 'tarif',
+                    'abonnement_actif_2' => 'abonnementActif',
+                    'date_fin_3' => 'dateFin',
+                    'tag_4' => 'tag',
+                    'nom_ou_societe_5' => 'nomOuSociete',
+                    'adresse_6' => 'adresse',
+                    'ville_7' => 'ville',
+                    'code_postal_8' => 'codePostal',
+                    'pays_9' => 'pays',
+                    'numero_tva_10' => 'numeroTva',
+                    'reccuring_payment_id_11' => 'reccuring_payment_id',
+                    'reccuring_payment_payin_id_12' => 'reccuring_payment_payin_id',
+                    'created_at_13' => 'createdAt',
+                    'updated_at_14' => 'updatedAt',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'user_id_15' => 'bigint',
+                    'offre_id_16' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'a' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'user_id_15' => 'user_id',
+                    'offre_id_16' => 'offre_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'a',
+                    'tarif_1' => 'a',
+                    'abonnement_actif_2' => 'a',
+                    'date_fin_3' => 'a',
+                    'tag_4' => 'a',
+                    'nom_ou_societe_5' => 'a',
+                    'adresse_6' => 'a',
+                    'ville_7' => 'a',
+                    'code_postal_8' => 'a',
+                    'pays_9' => 'a',
+                    'numero_tva_10' => 'a',
+                    'reccuring_payment_id_11' => 'a',
+                    'reccuring_payment_payin_id_12' => 'a',
+                    'created_at_13' => 'a',
+                    'updated_at_14' => 'a',
+                    'user_id_15' => 'a',
+                    'offre_id_16' => 'a',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Abonnement',
+                    'tarif_1' => 'App\\Entity\\Abonnement',
+                    'abonnement_actif_2' => 'App\\Entity\\Abonnement',
+                    'date_fin_3' => 'App\\Entity\\Abonnement',
+                    'tag_4' => 'App\\Entity\\Abonnement',
+                    'nom_ou_societe_5' => 'App\\Entity\\Abonnement',
+                    'adresse_6' => 'App\\Entity\\Abonnement',
+                    'ville_7' => 'App\\Entity\\Abonnement',
+                    'code_postal_8' => 'App\\Entity\\Abonnement',
+                    'pays_9' => 'App\\Entity\\Abonnement',
+                    'numero_tva_10' => 'App\\Entity\\Abonnement',
+                    'reccuring_payment_id_11' => 'App\\Entity\\Abonnement',
+                    'reccuring_payment_payin_id_12' => 'App\\Entity\\Abonnement',
+                    'created_at_13' => 'App\\Entity\\Abonnement',
+                    'updated_at_14' => 'App\\Entity\\Abonnement',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    [
+        [
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlExecutor' => null,
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlFinalizer' => $o[1],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'resultSetMapping' => $o[2],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'parameterMappings' => [
+                'val' => [
+                    0,
+                ],
+                'val2' => [
+                    1,
+                ],
+                'dateAujourdhui' => [
+                    2,
+                ],
+                'val3' => [
+                    3,
+                ],
+                'val4' => [
+                    4,
+                ],
+            ],
+        ],
+    ]
+); }];

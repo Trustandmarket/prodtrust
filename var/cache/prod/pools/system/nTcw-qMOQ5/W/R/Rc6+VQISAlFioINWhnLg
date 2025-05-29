@@ -1,0 +1,69 @@
+<?php //92817f45b53f3e8fb006e71a770fb642
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer' => [
+            'sql' => [
+                1 => 'SELECT w0_.umeta_id AS umeta_id_0, w0_.user_id AS user_id_1, w0_.meta_key AS meta_key_2, w0_.meta_value AS meta_value_3 FROM wp_usermeta w0_ WHERE w0_.user_id = ? AND w0_.meta_key LIKE ? ORDER BY w0_.umeta_id DESC',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'tt' => 'App\\Entity\\WpUsermeta',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'umeta_id_0' => 'umetaId',
+                    'user_id_1' => 'userId',
+                    'meta_key_2' => 'metaKey',
+                    'meta_value_3' => 'metaValue',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'tt' => null,
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'umeta_id_0' => 'tt',
+                    'user_id_1' => 'tt',
+                    'meta_key_2' => 'tt',
+                    'meta_value_3' => 'tt',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'umeta_id_0' => 'App\\Entity\\WpUsermeta',
+                    'user_id_1' => 'App\\Entity\\WpUsermeta',
+                    'meta_key_2' => 'App\\Entity\\WpUsermeta',
+                    'meta_value_3' => 'App\\Entity\\WpUsermeta',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    [
+        [
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlExecutor' => null,
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlFinalizer' => $o[1],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'resultSetMapping' => $o[2],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'parameterMappings' => [
+                'id' => [
+                    0,
+                ],
+                'meta' => [
+                    1,
+                ],
+            ],
+        ],
+    ]
+); }];

@@ -1,0 +1,3 @@
+<?php //App%255CEntity%255CWpComments%2524commentId
+
+return [PHP_INT_MAX, []];

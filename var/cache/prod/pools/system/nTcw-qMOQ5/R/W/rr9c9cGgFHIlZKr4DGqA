@@ -1,0 +1,129 @@
+<?php //240d9cf5d52b4f892baf465c8de5dda4
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer' => [
+            'sql' => [
+                1 => 'SELECT w0_.id AS id_0, w0_.post_author AS post_author_1, w0_.post_date AS post_date_2, w0_.post_date_gmt AS post_date_gmt_3, w0_.post_content AS post_content_4, w0_.post_title AS post_title_5, w0_.post_excerpt AS post_excerpt_6, w0_.post_status AS post_status_7, w0_.comment_status AS comment_status_8, w0_.ping_status AS ping_status_9, w0_.post_password AS post_password_10, w0_.post_name AS post_name_11, w0_.to_ping AS to_ping_12, w0_.pinged AS pinged_13, w0_.post_modified AS post_modified_14, w0_.post_modified_gmt AS post_modified_gmt_15, w0_.post_content_filtered AS post_content_filtered_16, w0_.post_parent AS post_parent_17, w0_.guid AS guid_18, w0_.menu_order AS menu_order_19, w0_.post_type AS post_type_20, w0_.post_mime_type AS post_mime_type_21, w0_.comment_count AS comment_count_22 FROM wp_posts w0_ WHERE w0_.post_name = ? AND w0_.post_type = ? AND w0_.post_status = ?',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'wp' => 'App\\Entity\\WpPosts',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'post_author_1' => 'postAuthor',
+                    'post_date_2' => 'postDate',
+                    'post_date_gmt_3' => 'postDateGmt',
+                    'post_content_4' => 'postContent',
+                    'post_title_5' => 'postTitle',
+                    'post_excerpt_6' => 'postExcerpt',
+                    'post_status_7' => 'postStatus',
+                    'comment_status_8' => 'commentStatus',
+                    'ping_status_9' => 'pingStatus',
+                    'post_password_10' => 'postPassword',
+                    'post_name_11' => 'postName',
+                    'to_ping_12' => 'toPing',
+                    'pinged_13' => 'pinged',
+                    'post_modified_14' => 'postModified',
+                    'post_modified_gmt_15' => 'postModifiedGmt',
+                    'post_content_filtered_16' => 'postContentFiltered',
+                    'post_parent_17' => 'postParent',
+                    'guid_18' => 'guid',
+                    'menu_order_19' => 'menuOrder',
+                    'post_type_20' => 'postType',
+                    'post_mime_type_21' => 'postMimeType',
+                    'comment_count_22' => 'commentCount',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'wp' => null,
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'wp',
+                    'post_author_1' => 'wp',
+                    'post_date_2' => 'wp',
+                    'post_date_gmt_3' => 'wp',
+                    'post_content_4' => 'wp',
+                    'post_title_5' => 'wp',
+                    'post_excerpt_6' => 'wp',
+                    'post_status_7' => 'wp',
+                    'comment_status_8' => 'wp',
+                    'ping_status_9' => 'wp',
+                    'post_password_10' => 'wp',
+                    'post_name_11' => 'wp',
+                    'to_ping_12' => 'wp',
+                    'pinged_13' => 'wp',
+                    'post_modified_14' => 'wp',
+                    'post_modified_gmt_15' => 'wp',
+                    'post_content_filtered_16' => 'wp',
+                    'post_parent_17' => 'wp',
+                    'guid_18' => 'wp',
+                    'menu_order_19' => 'wp',
+                    'post_type_20' => 'wp',
+                    'post_mime_type_21' => 'wp',
+                    'comment_count_22' => 'wp',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\WpPosts',
+                    'post_author_1' => 'App\\Entity\\WpPosts',
+                    'post_date_2' => 'App\\Entity\\WpPosts',
+                    'post_date_gmt_3' => 'App\\Entity\\WpPosts',
+                    'post_content_4' => 'App\\Entity\\WpPosts',
+                    'post_title_5' => 'App\\Entity\\WpPosts',
+                    'post_excerpt_6' => 'App\\Entity\\WpPosts',
+                    'post_status_7' => 'App\\Entity\\WpPosts',
+                    'comment_status_8' => 'App\\Entity\\WpPosts',
+                    'ping_status_9' => 'App\\Entity\\WpPosts',
+                    'post_password_10' => 'App\\Entity\\WpPosts',
+                    'post_name_11' => 'App\\Entity\\WpPosts',
+                    'to_ping_12' => 'App\\Entity\\WpPosts',
+                    'pinged_13' => 'App\\Entity\\WpPosts',
+                    'post_modified_14' => 'App\\Entity\\WpPosts',
+                    'post_modified_gmt_15' => 'App\\Entity\\WpPosts',
+                    'post_content_filtered_16' => 'App\\Entity\\WpPosts',
+                    'post_parent_17' => 'App\\Entity\\WpPosts',
+                    'guid_18' => 'App\\Entity\\WpPosts',
+                    'menu_order_19' => 'App\\Entity\\WpPosts',
+                    'post_type_20' => 'App\\Entity\\WpPosts',
+                    'post_mime_type_21' => 'App\\Entity\\WpPosts',
+                    'comment_count_22' => 'App\\Entity\\WpPosts',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    [
+        [
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlExecutor' => null,
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlFinalizer' => $o[1],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'resultSetMapping' => $o[2],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'parameterMappings' => [
+                'postName' => [
+                    0,
+                ],
+                'postType' => [
+                    1,
+                ],
+                'postStatus' => [
+                    2,
+                ],
+            ],
+        ],
+    ]
+); }];

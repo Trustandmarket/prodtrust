@@ -1,0 +1,87 @@
+<?php //App.Entity.User
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+        ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\Email'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Email')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'constraints' => [
+                [
+                    $o[1],
+                ],
+                2 => [
+                    $o[3],
+                ],
+            ],
+            'constraintsByGroup' => [
+                [
+                    'Default' => [
+                        $o[1],
+                    ],
+                    'User' => [
+                        $o[1],
+                    ],
+                ],
+                2 => [
+                    'Default' => [
+                        $o[3],
+                    ],
+                    'User' => [
+                        $o[3],
+                    ],
+                ],
+            ],
+            'name' => [
+                'App\\Entity\\User',
+                2 => 'email_canonical',
+            ],
+            'defaultGroup' => [
+                'User',
+            ],
+            'members' => [
+                [
+                    'email_canonical' => [
+                        $o[2],
+                    ],
+                ],
+            ],
+            'properties' => [
+                [
+                    'email_canonical' => $o[2],
+                ],
+            ],
+            'groups' => [
+                1 => [
+                    'Default',
+                    'User',
+                ],
+                3 => [
+                    'Default',
+                    'User',
+                ],
+            ],
+            'message' => [
+                1 => 'Cette adresse email est déjà utilisée.',
+                3 => 'Adresse {{ value }} non valide.',
+            ],
+            'fields' => [
+                1 => [
+                    'email_canonical',
+                ],
+            ],
+            'class' => [
+                2 => 'App\\Entity\\User',
+            ],
+            'property' => [
+                2 => 'email_canonical',
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

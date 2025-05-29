@@ -1,0 +1,127 @@
+<?php //ca1d7a206082aca08b103fd68fc57a46
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\Exec\\SingleSelectSqlFinalizer' => [
+            'sql' => [
+                1 => 'SELECT w0_.id AS id_0, w0_.user_nicename AS user_nicename_1, w0_.username_canonical AS username_canonical_2, w0_.user_registered AS user_registered_3, w0_.updated_at AS updated_at_4, w0_.user_activation_key AS user_activation_key_5, w0_.display_name AS display_name_6, w0_.landing_page AS landing_page_7, w0_.user_status AS user_status_8, w0_.enabled AS enabled_9, w0_.last_activity_at AS last_activity_at_10, w0_.email_canonical AS email_canonical_11, w0_.userEmail AS userEmail_12, w0_.roles AS roles_13, w0_.userPass AS userPass_14, w0_.is_verified AS is_verified_15, w0_.date_naissance AS date_naissance_16 FROM `wp_users` w0_ WHERE (LOWER(w0_.user_nicename) LIKE ? OR LOWER(w0_.user_nicename) IN (?) OR LOWER(w0_.username_canonical) LIKE ? OR LOWER(w0_.username_canonical) IN (?) OR LOWER(w0_.user_activation_key) LIKE ? OR LOWER(w0_.user_activation_key) IN (?) OR LOWER(w0_.display_name) LIKE ? OR LOWER(w0_.display_name) IN (?) OR LOWER(w0_.landing_page) LIKE ? OR LOWER(w0_.landing_page) IN (?) OR LOWER(w0_.email_canonical) LIKE ? OR LOWER(w0_.email_canonical) IN (?) OR LOWER(w0_.userEmail) LIKE ? OR LOWER(w0_.userEmail) IN (?) OR LOWER(w0_.userPass) LIKE ? OR LOWER(w0_.userPass) IN (?) OR LOWER(w0_.date_naissance) LIKE ? OR LOWER(w0_.date_naissance) IN (?)) AND w0_.id IN (?) ORDER BY w0_.id DESC',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'entity' => 'App\\Entity\\User',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'user_nicename_1' => 'userNicename',
+                    'username_canonical_2' => 'usernameCanonical',
+                    'user_registered_3' => 'userRegistered',
+                    'updated_at_4' => 'updatedAt',
+                    'user_activation_key_5' => 'userActivationKey',
+                    'display_name_6' => 'displayName',
+                    'landing_page_7' => 'landingPage',
+                    'user_status_8' => 'userStatus',
+                    'enabled_9' => 'enabled',
+                    'last_activity_at_10' => 'lastActivityAt',
+                    'email_canonical_11' => 'email_canonical',
+                    'userEmail_12' => 'userEmail',
+                    'roles_13' => 'roles',
+                    'userPass_14' => 'password',
+                    'is_verified_15' => 'isVerified',
+                    'date_naissance_16' => 'dateNaissance',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'entity' => null,
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'entity',
+                    'user_nicename_1' => 'entity',
+                    'username_canonical_2' => 'entity',
+                    'user_registered_3' => 'entity',
+                    'updated_at_4' => 'entity',
+                    'user_activation_key_5' => 'entity',
+                    'display_name_6' => 'entity',
+                    'landing_page_7' => 'entity',
+                    'user_status_8' => 'entity',
+                    'enabled_9' => 'entity',
+                    'last_activity_at_10' => 'entity',
+                    'email_canonical_11' => 'entity',
+                    'userEmail_12' => 'entity',
+                    'roles_13' => 'entity',
+                    'userPass_14' => 'entity',
+                    'is_verified_15' => 'entity',
+                    'date_naissance_16' => 'entity',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\User',
+                    'user_nicename_1' => 'App\\Entity\\User',
+                    'username_canonical_2' => 'App\\Entity\\User',
+                    'user_registered_3' => 'App\\Entity\\User',
+                    'updated_at_4' => 'App\\Entity\\User',
+                    'user_activation_key_5' => 'App\\Entity\\User',
+                    'display_name_6' => 'App\\Entity\\User',
+                    'landing_page_7' => 'App\\Entity\\User',
+                    'user_status_8' => 'App\\Entity\\User',
+                    'enabled_9' => 'App\\Entity\\User',
+                    'last_activity_at_10' => 'App\\Entity\\User',
+                    'email_canonical_11' => 'App\\Entity\\User',
+                    'userEmail_12' => 'App\\Entity\\User',
+                    'roles_13' => 'App\\Entity\\User',
+                    'userPass_14' => 'App\\Entity\\User',
+                    'is_verified_15' => 'App\\Entity\\User',
+                    'date_naissance_16' => 'App\\Entity\\User',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    [
+        [
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlExecutor' => null,
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlFinalizer' => $o[1],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'resultSetMapping' => $o[2],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'parameterMappings' => [
+                'query_for_text' => [
+                    0,
+                    2,
+                    4,
+                    6,
+                    8,
+                    10,
+                    12,
+                    14,
+                    16,
+                ],
+                'query_as_words' => [
+                    1,
+                    3,
+                    5,
+                    7,
+                    9,
+                    11,
+                    13,
+                    15,
+                    17,
+                ],
+                'dpid' => [
+                    18,
+                ],
+            ],
+        ],
+    ]
+); }];

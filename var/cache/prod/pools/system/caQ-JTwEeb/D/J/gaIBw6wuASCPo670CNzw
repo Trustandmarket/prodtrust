@@ -1,0 +1,3 @@
+<?php //App%255CEntity%255CWpOptions%2524optionName
+
+return [PHP_INT_MAX, []];

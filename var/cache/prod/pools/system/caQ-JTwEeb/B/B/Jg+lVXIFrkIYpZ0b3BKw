@@ -1,0 +1,28 @@
+<?php //App%255CController%255CHomeController%2523nos_prestations_page
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/{_locale}/{navigation}',
+            ],
+            'name' => [
+                'site_navigation',
+            ],
+            'requirements' => [
+                [
+                    'navigation' => '^((?!connexion|login|creer-un-compte|register|votre-projet|contactez-nous|envoyez-nous-vos-commentaires|login_check|logout|confirmation_email|confirm|confirmed|request|reset|lostpassword_confirmation_email|send-email|change-password|blog|annonces|paiement|utilisateur|chat|admin|dashboard|devenir-pro|profil|devis|recherche|photographes|videastes|studio-audio|musiciens|chorales|studio-de-tournage|studio-photo-video|evenementiels|sitemap.xml|operations-speciales|promo-et-com|leads-gen|univers-trust|creer-une-experience|operations|annonces|newsletter|souscription|abonnement|server-action).)*$',
+                    '_locale' => 'fr',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

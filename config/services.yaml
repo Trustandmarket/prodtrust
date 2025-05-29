@@ -1,0 +1,57 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+    locale: 'fr'
+    product_directory: '%kernel.project_dir%/public/wp-content/uploads'
+    avatar_directory: '%kernel.project_dir%/public/wp-content/avatars'
+    proof_identity_directory: '%kernel.project_dir%/public/wp-content/identityProof'
+    proof_registration_directory: '%kernel.project_dir%/public/wp-content/registrationProof'
+    portfolio_directory: '%kernel.project_dir%/public/wp-content/portfolio'
+    announces_directory: '%kernel.project_dir%/public/wp-content/annonces'
+    ops_speciales_images_directory: '%kernel.project_dir%/public/wp-content/marketing'
+    google_recaptcha_site_key: '%env(GOOGLE_RECAPTCHA_SITE_KEY)%'
+    environnement: 'prod'
+    #'%env(APP_ENV)%'
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+    App\Controller\ErrorController:
+        public: true
+        arguments:
+            $debug: '%kernel.debug%'
+                # ...
+    App\EventListener\UserPreUpdate:
+        tags:
+            - # these are the options required to define the entity listener
+                name: 'doctrine.orm.entity_listener'
+                event: 'preUpdate'
+                entity: 'App\Entity\User'
+    App\EventListener\DepartementPreRemove:
+        tags:
+            - # these are the options required to define the entity listener
+                name: 'doctrine.orm.entity_listener'
+                event: 'preRemove'
+                entity: 'App\Entity\Departement'
+    App\EventListener\AbonnementPrePersist:
+        tags:
+            - # these are the options required to define the entity listener
+                name: 'doctrine.orm.entity_listener'
+                event: 'prePersist'
+                entity: 'App\Entity\Abonnement'
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
